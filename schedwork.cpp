@@ -48,10 +48,7 @@ bool schedule(
 
     // init dimensions for sched
     for (int i = 0; i < avail.size(); i++) {
-        vector<Worker_T> temp; 
-        for (int j = 0; j < dailyNeed; j++) {
-            temp.push_back(-1);
-        }
+        vector<Worker_T> temp(dailyNeed, -1); 
         sched.push_back(temp);
     }
     // init all vals in workerShifts to 0
